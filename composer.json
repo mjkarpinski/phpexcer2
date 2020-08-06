@@ -1,0 +1,18 @@
+{
+    "name": "karp/choose-my-car",
+    "require": {
+        "illuminate/support": "^7.23",
+        "nesbot/carbon": "^2.38"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChooseMyCar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Karp",
+            "email": "karp@karp.space"
+        }
+    ]
+}
