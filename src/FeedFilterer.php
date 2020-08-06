@@ -28,7 +28,7 @@ final class FeedFilterer
 
     public function setYear($year): self
     {
-        $this->year = Carbon::createFromFormat('Y', $year);
+        $this->year = Carbon::createFromFormat('Y', $year)->startOfYear();
 
         return $this;
     }
@@ -53,7 +53,7 @@ final class FeedFilterer
     {
         if ($this->year !== null) {
             $this->feed = $this->feed->filter(function ($car) {
-                return $this->year->format('Y') === $car->getYear()->format('Y');
+                return $car->getYear()->greaterThanOrEqualTo($this->year);
             });
         }
     }
