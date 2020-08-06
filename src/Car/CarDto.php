@@ -25,7 +25,7 @@ final class CarDto
         $this->manufacturer = $manufacturer;
         $this->model = $model;
         $this->registration_plate = $registration_plate;
-        $this->year = Carbon::createFromFormat('Y', $year);
+        $this->year = Carbon::createFromFormat('Y', $year)->startOfYear();
         $this->type = $type;
         $this->colour = $colour;
     }
