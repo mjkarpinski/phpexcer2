@@ -5,5 +5,9 @@ namespace ChooseMyCar\Validator;
 
 final class Csv
 {
-
+    public static function check(string $filename)
+    {
+        //This could be smarter
+        return strpos($filename, '.csv');
+    }
 }

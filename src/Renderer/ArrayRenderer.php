@@ -9,6 +9,10 @@ final class ArrayRenderer implements RendererInterface
 {
     public function render(Collection $data)
     {
-        return $data->toArray();
+        return $data->map(function($car) {
+            return $car->toArray();
+        })
+            ->values()
+            ->toArray();
     }
 }

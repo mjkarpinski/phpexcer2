@@ -2,7 +2,9 @@
     "name": "karp/choose-my-car",
     "require": {
         "illuminate/support": "^7.23",
-        "nesbot/carbon": "^2.38"
+        "nesbot/carbon": "^2.38",
+        "ext-imagick": "*"
+
     },
     "autoload": {
         "psr-4": {
